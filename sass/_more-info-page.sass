@@ -1,0 +1,209 @@
+$size: 90px
+.more-info
+    &-page
+        display: none
+        height: 100vh
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        z-index: 10
+
+        &.active
+            display: flex
+    
+        // owl-carousel
+
+        .owl-stage-outer, .owl-stage, .owl-item
+            height: 100%
+
+    // carousel nav buttons
+    &-carousel
+        &__item
+            height: 100%
+
+            img
+                height: 100%
+                object-fit: cover
+                width: auto !important
+                margin: 0 auto
+
+        .owl-dots
+            display: none
+        .owl-nav
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+
+        .owl-prev, .owl-next
+            height: $size * 2
+            width: $size
+            position: absolute
+            top: 50%
+            background-color: rgba(#282830, 0.7) !important
+            z-index: 1
+            transform: translateY(-50%)
+        
+        .owl-prev
+            left: 0
+            border-bottom-right-radius: $size * 2
+            border-top-right-radius: $size * 2
+
+            img
+                transform: rotate(180deg) translateX(50%) 
+        
+        .owl-next
+            right: 0
+            border-bottom-left-radius: $size * 2
+            border-top-left-radius: $size * 2
+
+            img
+                transform: translateX(50%)
+
+
+    &__gallery
+        flex-basis: 10%
+        background-color: $active
+        padding: 30px 34px 0 34px
+        color: #787878
+        font-family: Muller
+        font-weight: 400
+        position: relative
+
+        .gallery__subtitle
+            margin-bottom: 20px
+    
+    &__btn
+        position: absolute
+        bottom: 34px
+
+        .btn
+            font-family: Muller
+            font-size: 12px
+            font-weight: 400
+
+            & > img, & > span
+                vertical-align: middle
+            
+            & > span
+                margin-left: 3px
+    
+    &__photo
+        flex-basis: 60%
+        overflow: hidden
+        display: flex
+        align-items: center
+    
+    &__descr
+        flex-basis: 30%
+        overflow-y: auto 
+    
+
+    &-descr
+        padding: 50px 60px 0 40px
+        color: #282830
+
+        &__title
+            margin-bottom: 10px
+            font-size: 36px
+            font-weight: 700
+        
+        &__place
+            margin-bottom: 20px
+            font-family: Muller
+            font-size: 18px
+            font-weight: 400
+        
+        &__fields
+            margin-bottom: 20px
+            padding-top: 30px
+            padding-bottom: 15px
+            border-top: 1px solid #cecece
+            border-bottom: 1px solid #cecece
+
+            &.no-bottom-border
+                border-bottom: none
+            
+    
+    &__close-btn
+        cursor: pointer
+        position: absolute
+        top: 3vh
+        right: 2vw
+        height: 33px
+        width: 33px
+        span
+            top: 6px
+            
+            &, &:before, &:after
+                display: block
+                height: 2px
+                width: 100%
+                position: absolute
+                background-color: #000000       
+
+            &:before, &:after
+                content: ''
+                transition: all .2s
+
+            &:before
+                top: -6px
+            &:after
+                top: 6px
+        
+        &.active
+            span
+                background-color: transparent
+                &:before, &:after
+                    background-color: #000000
+                
+                &:before
+                    top: 0
+                    transform: rotate(-45deg)
+                
+                &:after
+                    top: 0
+                    transform: rotate(45deg)
+        
+        &_dark-bg
+            span
+                &, &:before, &:after
+                    background-color: #fff
+
+.descr
+    &-field
+        display: flex
+        margin-bottom: 9px
+        font-family: Muller
+        font-size: 14px
+        font-weight: 700
+
+        &__name
+            flex-basis: 40%
+            &_bigger
+                margin-right: 10px
+                flex-basis: 90%
+        
+        &__value
+            flex-basis: 60%
+            color: #919191
+            font-weight: 500
+            &_smaller
+                flex-basis: 10%
+    
+    &-block
+        margin-bottom: 30px
+        font-family: Muller
+        &__title
+            margin-bottom: 15px
+            font-size: 18px
+            font-weight: 700
+        
+        &__text
+            font-size: 14px
+            font-weight: 400
+
+
+

@@ -1,0 +1,56 @@
+.main-page
+    position: relative
+    z-index: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding-left: 140px
+    background: no-repeat url(../img/main-page/bg_c.jpg) center / cover
+
+    &-main
+        width: 560px
+        &__title, &__subtitle
+            font-weight: 700
+            text-transform: uppercase
+
+        &__title
+            color: $active
+            font-size: 54px
+            
+        
+        &__subtitle
+            margin-bottom: 45px
+            color: #000000
+            font-family: Muller
+            font-size: 16px
+
+    &-btn
+        display: flex
+        align-items: center
+        position: absolute
+        bottom: 10vh
+        width: 300px
+        
+    &-btn, &-btn__link
+        
+        color: $active
+        fill: $active
+    
+    &-btn
+
+        &__link-block
+            display: flex
+            align-items: center
+        
+        &__icon
+            margin-right: 18px
+        
+        &:hover, &:hover &__link
+            color: lighten($active, 20)
+            fill: lighten($active, 50)
+            
+        
+
+        
+
+        

@@ -1,0 +1,141 @@
+.menu
+    display: flex
+    position: absolute
+    top: 100px
+    left: 143px
+    &__btn
+        height: 14px
+        width: 19px
+        margin-right: 11px
+        position: relative
+        cursor: pointer
+        span
+            top: 6px
+            
+            &, &:before, &:after
+                display: block
+                height: 2px
+                width: 100%
+                position: absolute
+                background-color: $active        
+
+            &:before, &:after
+                content: ''
+                transition: all .2s
+
+            &:before
+                top: -6px
+            &:after
+                top: 6px
+        
+        &.active
+            span
+                background-color: transparent
+                &:before, &:after
+                    background-color: #fff
+                
+                &:before
+                    top: 0
+                    transform: rotate(-45deg)
+                
+                &:after
+                    top: 0
+                    transform: rotate(45deg)
+        
+        &_dark-bg
+            span
+                &, &:before, &:after
+                    background-color: #fff
+
+
+    &__text
+        color: $active
+        text-transform: uppercase
+        font-size: 14px
+        font-weight: 700
+        cursor: pointer
+
+        &.active
+            color: #fff
+    
+        &_dark-bg
+            color: #fff
+    
+    &__descr
+        margin-left: 32px
+        padding-left: 24px
+        color: #a1a1a1
+        border-left: 2px solid #a1a1a1
+    
+
+
+// Numbers
+
+.numbers
+    display: flex
+    width: 420px
+    align-items: center
+    justify-content: space-between
+    
+    &__signs, &__photos, &__members
+        color: $active
+        font-size: 48px
+        font-weight: 700
+
+        &_small
+            font-size: 24px
+
+    &__text
+        display: block
+        color: $active
+        font-family: Muller
+        font-size: 14px
+        font-weight: 700
+
+        &_small
+            font-size: 12px
+            font-weight: 500
+    
+    &_dark-bg > &__signs, &_dark-bg > &__photos, &_dark-bg > &__members
+        color: #ffffff
+
+    &_dark-bg &__text
+        color: #6b6b6b
+
+// button
+.btn
+    padding: 12px 18px
+    background-color: transparent
+    border-radius: 22px
+    border: 1px solid #282830
+    color: #282830
+    font-family: Muller
+    font-size: 14px
+    font-weight: 700
+    line-height: 1
+
+    &.active, &:hover, &:active
+        background-color: #282830
+        color: #fff
+    
+    &_dark-bg
+        border: 1px solid #ffffff
+        color: #ffffff
+
+        &:hover, &:active
+            background-color: rgba(#cfd8dc, .1)
+
+// header-info
+
+.header
+    &-info
+        display: flex
+        position: absolute
+        right: 140px
+        top: 82px
+
+        &__btn
+            margin-left: 42px
+
+
+
